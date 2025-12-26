@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatPulse - Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--
+      ChatPulse Dashboard
+      
+      PRIVATE MESSAGES EXPLANATION:
+      ChatPulse cannot access private messages (DMs) or group chats because:
+      1. Discord OAuth2 scopes only grant access to servers (guilds), not DMs
+      2. Bot tokens can only access channels in servers where the bot is installed
+      3. This is a security feature to protect user privacy
+      4. ChatPulse is designed for server channel management only
+    -->
+
+    <div class="app-container dashboard-container">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1 class="app-title">ChatPulse</h1>
+        </div>
+        <div class="header-right">
+          <div class="user-info" id="userInfo">
+            <span class="user-name" id="userName">Loading...</span>
+            <img
+              class="user-avatar"
+              id="userAvatar"
+              src=""
+              alt="User Avatar"
+            />
+          </div>
+          <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <div class="dashboard-grid">
+          <!-- Server Selection -->
+          <div class="card">
+            <h2 class="card-title">Select Server</h2>
+            <div class="field-group">
+              <label for="serverSelect">Server</label>
+              <select id="serverSelect" class="select-input">
+                <option value="">Choose a server...</option>
+              </select>
+            </div>
+            <p class="help-text" id="serverHelp">
+              Only servers where you have Manage Server permission and the bot
+              is installed are shown.
+            </p>
+          </div>
+
+          <!-- Channel Selection -->
+          <div class="card">
+            <h2 class="card-title">Select Channel</h2>
+            <div class="field-group">
+              <label for="channelSelect">Channel</label>
+              <select id="channelSelect" class="select-input" disabled>
+                <option value="">Select a server first...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Messages Section -->
+        <div class="card messages-card">
+          <h2 class="card-title">Recent Messages</h2>
+          <div class="messages-container" id="messagesContainer">
+            <p class="empty-state">Select a channel to view messages</p>
+          </div>
+          <button
+            class="refresh-btn"
+            id="refreshBtn"
+            disabled
+            title="Refresh messages"
+          >
+            ↻ Refresh
+          </button>
+        </div>
+
+        <!-- Send Message Section -->
+        <div class="card">
+          <h2 class="card-title">Send Message</h2>
+          <div class="field-group">
+            <label for="messageInput">Message</label>
+            <textarea
+              id="messageInput"
+              rows="4"
+              placeholder="Type your message here..."
+              disabled
+            ></textarea>
+          </div>
+          <button
+            class="primary-btn"
+            id="sendBtn"
+            disabled
+          >
+            Send Message
+          </button>
+          <p class="status-text" id="statusText"></p>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <p>
+          ChatPulse only accesses server channels where the bot is installed.
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+

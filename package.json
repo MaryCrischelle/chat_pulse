@@ -1,0 +1,25 @@
+{
+  "name": "chatpulse-discord",
+  "version": "1.0.0",
+  "description": "ChatPulse - Discord OAuth2 + Bot Dashboard",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "oauth2",
+    "express",
+    "chatpulse"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^4.19.2",
+    "express-session": "^1.18.2",
+    "node-fetch": "^3.3.2"
+  }
+}
