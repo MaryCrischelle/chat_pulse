@@ -237,3 +237,8 @@ For issues or questions:
 
 **ChatPulse** - Simple Discord Bot Dashboard | Built with Node.js + Express
 
+# Roles
+## API & Authentication Handler - Richanne Castuera
+## JavaScript Logic / Data Processing - Angela Eunice Rimando
+## UI & CSS Designer - Reyne Careyne Doria
+## GitHub & Documentation Manager - Mary Crischelle Bautista
