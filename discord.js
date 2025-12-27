@@ -56,7 +56,6 @@ export async function getBotGuilds(botToken) {
 
   return await response.json();
 }
-
 /**
  * Fetch text channels from a guild using bot token
  */
