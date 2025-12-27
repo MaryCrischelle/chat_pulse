@@ -19,7 +19,6 @@ export async function getUserInfo(accessToken) {
   if (!response.ok) {
     throw new Error(`Failed to fetch user info: ${response.statusText}`);
   }
-
   return await response.json();
 }
 
