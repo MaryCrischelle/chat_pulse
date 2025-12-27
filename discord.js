@@ -27,7 +27,7 @@ export async function getUserInfo(accessToken) {
  * Fetch user's guilds (servers) using OAuth2 access token
  */
 export async function getUserGuilds(accessToken) {
-  const response = await fetch(`${DISCORD_API_BASE}/users/@me/guilds`, {
+  const response = await fetch(`${DISCORD_API_BASE}/users/@me/guilds`,{
     headers: {
       Authorization: `Bearer ${accessToken}`,
     },
