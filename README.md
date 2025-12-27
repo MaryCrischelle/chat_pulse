@@ -1,6 +1,6 @@
 # ChatPulse Discord
 
-A simple,secure Discord OAuth2 + Bot Dashboard web application that allows users to manage Discord servers and send messages through a bot.
+A simple, secure Discord OAuth2 + Bot Dashboard web application that allows users to manage Discord servers and send messages through a bot.
 
 ## 🎯 Features
 
