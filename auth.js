@@ -4,8 +4,8 @@
 import fetch from "node-fetch";
 
 /**
- * Redirect user to Discord OAuth2 login page
- */
+ ** Redirect user to Discord OAuth2 login page
+ **/
 export function handleLogin(req, res, clientId, redirectUri) {
   // If the user is already logged in, skip OAuth and go straight to dashboard
   if (req.session && req.session.accessToken) {
