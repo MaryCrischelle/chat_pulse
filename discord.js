@@ -98,7 +98,7 @@ export async function getMessages(botToken, channelId, limit = 10) {
  * Send a message to a channel using bot token
  */
 export async function sendMessage(botToken, channelId, content) {
-  const response = await fetch(`${DISCORD_API_BASE}/channels/${channelId}/messages`, {
+  const response = await fetch (`${DISCORD_API_BASE}/channels/${channelId}/messages`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
