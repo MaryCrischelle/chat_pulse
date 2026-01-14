@@ -94,7 +94,7 @@ async function loadUserInfo() {
         : `https://cdn.discordapp.com/embed/avatars/${(data.user.discriminator || "0") % 5}.png`;
       userAvatar.src = avatarUrl;
     }
-  } catch (error) {
+  } catch  (error) {
     console.error("Error loading user info:", error);
     setStatus("error", "Failed to load user info");
   }
@@ -131,7 +131,7 @@ async function loadGuilds() {
           serverHelp.textContent =
             "No servers found. Make sure you have Manage Server permission and the bot is installed.";
         }
-        serverHelp.style.color = "#f97373";
+        serverHelp.style.color  = "#f97373";
       } else {
         serverHelp.textContent =
           "Only servers where you have Manage Server permission and the bot is installed are shown.";
@@ -228,7 +228,7 @@ function createMessageElement(msg) {
   author.className = "message-author";
   author.textContent = msg.author?.username || "Unknown User";
 
-  const timestamp = document.createElement("span");
+  const timestamp =  document.createElement("span");
   timestamp.className = "message-timestamp";
   const date = new Date(msg.timestamp);
   timestamp.textContent = date.toLocaleString();
@@ -313,3 +313,4 @@ function setStatus(state, text) {
     // Keep current classes but clear text
   }
 }
+
