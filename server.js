@@ -125,8 +125,8 @@ app.get("/me", requireAuth, async (req, res) => {
 app.get("/guilds", requireAuth, async (req, res) => {
   try {
     // Step 1: Fetch user's guilds using OAuth access token (not bot token)
-    const userGuilds = await getUserGuilds(req.session.accessToken);
-    console.log(`[Guilds] User is in ${userGuilds.length} guilds`);
+     const userGuilds = await getUserGuilds(req.session.accessToken);
+     console.log(`[Guilds] User is in ${userGuilds.length} guilds`);
 
     if (userGuilds.length === 0) {
       console.log("[Guilds] User is not in any guilds");
