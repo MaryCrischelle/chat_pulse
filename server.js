@@ -260,7 +260,7 @@ app.post("/send-message", requireAuth, async (req, res) => {
 });
 
 // Redirect root to dashboard if authenticated, otherwise show landing page
-app.get("/", (req, res) => {
+ app.get("/", (req, res) => {
   if (req.session.accessToken) {
     return res.redirect("/dashboard.html");
   }
