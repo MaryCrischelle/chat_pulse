@@ -134,10 +134,10 @@ export async function handleCallback(
 
     const userData = await userResponse.json();
     req.session.user = {
-      id: userData.id,
-      username: userData.username,
-      avatar: userData.avatar,
-      discriminator: userData.discriminator,
+      id:userData.id,
+      username:userData.username,
+      avatar:userData.avatar,
+      discriminator:userData.discriminator,
     };
 
     // Clear state after successful validation & login
